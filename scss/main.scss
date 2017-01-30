@@ -1,0 +1,70 @@
+// include foundation
+
+@import "../node_modules/foundation-sites/scss/foundation";
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+html {
+  background-image: url("/Users/mariamqasim/desktop/tiy/newflag/images/flag.jpg");
+  opacity: .5;
+
+}
+
+body {
+  background-color: white;
+  border: 2px solid maroon;
+  padding: 20px;
+  margin: 20px;
+  color: black;
+  text-align: center;
+  height: 800px;
+}
+
+input {
+  margin: 50px;
+  padding: 20px;
+  margin: auto;
+  border: 2px solid maroon;
+}
+
+.pickteam {
+  padding: 20px;
+}
+
+#addbtn {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid maroon;
+}
+
+#addbtn:hover {
+  background-color: maroon;
+  border: 2px solid beige;
+  color: white;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
+
+#game {
+@include grid-row()
+// display: flex;
+
+  .add {
+    @include grid-column(12);
+    display: flex;
+    #addPlayer{
+      margin: 20px;
+    }
+    .form {
+    @include grid-column(10);
+    select {
+      width: auto;
+      height: auto;
+      }
+    }
+  }
+}
